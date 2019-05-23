@@ -56,7 +56,7 @@
 
               <div class="row">
                 <!-- Text input-->
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                   <label class="control-label" for="textinput">Nome Torneio</label>
                   <input id="textinput" name="textinput" type="text" placeholder="Jogatina no Zé"
                     class="form-control input-md" required="">
@@ -64,7 +64,7 @@
 
                 <!-- Select Basic -->
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                   <label class="control-label" for="selectbasic">Tipo do Torneio</label>
                   <br>
                   <select class="js-example-basic-single container-fluid" name="state">
@@ -85,7 +85,7 @@
 
               <div class="row">
                 <!-- Select Multiple -->
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                   <label class="control-label" for="selectmultiple">Selecione os Times</label>
                   <br>
                   <select class="js-example-basic-multiple container-fluid" name="states[]" multiple="multiple">
@@ -96,39 +96,38 @@
                 </div>
 
                 <!-- Multiple Radios -->
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                   <label class="control-label" for="radios">Seleção das Partidas
                   </label>
-                    <div class="radio">
-                      <label for="radios-0">
-                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-                        Aleatório
-                      </label>
-                    </div>
-                    <div class="radio">
-                      <label for="radios-1">
-                        <input type="radio" name="radios" id="radios-1" value="2">
-                        Escolhido
-                      </label>
-                    </div>
+                  <div class="radio">
+                    <label for="radios-0">
+                      <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                      Aleatório
+                    </label>
+                  </div>
+                  <div class="radio">
+                    <label for="radios-1">
+                      <input type="radio" name="radios" id="radios-1" value="2">
+                      Escolhido
+                    </label>
+                  </div>
                 </div>
-
-
-
               </div>
 
-              <div class="row">
+              <div class="row" id="esconder">
+                <div class="col-md-12">
                   <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
-                      <div class="input-group-append" id="button-addon4">
-                        <button class="btn btn-outline-secondary" type="button">Botão</button>
-                        <button class="btn btn-outline-secondary" type="button">Botão</button>
-                      </div>
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                      aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+                    <div class="input-group-append" id="button-addon4">
+                      <button class="btn btn-outline-secondary" type="button">Botão</button>
                     </div>
+                  </div>
+                </div>
               </div>
 
 
-
+              <br>
               <div class="form-group">
                 <div class="controls">
                   <button id="singlebutton" name="singlebutton" class="btn btn-primary">Salvar</button>
@@ -154,8 +153,14 @@
   $(document).ready(function () {
     $('.js-example-basic-multiple').select2();
     $('.js-example-basic-single').select2();
+    $('#esconder').hide();
+    $('#radios-0').click(function () {
+      $('#esconder').hide();
+    });
 
-
+    $('#radios-1').click(function () {
+      $('#esconder').show();
+    })
 
   });
 </script>
