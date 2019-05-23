@@ -5,8 +5,79 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+
+  <link rel="stylesheet" href="css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+  <a href="" class="navbar-brand">Torneios</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <section class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meus torneios</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meus times</a>
+      </li>
+    </ul>
+  </section>
+</nav>
+
+<main class="container-fluid" style="max-width: 1080px">
+  <nav aria-label="breadcrumb" class="pt-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page">Home</li>
+    </ol>
+  </nav>
+
+  <section class="row">
+    <div class="col-sm card shadow-sm m-3 mt-0 p-0">
+      <div class="card-body">
+        <h5 class="card-title">Resultados de jogos recentes</h5>
+
+        <ul class="list-group">
+          <li class="list-group-item bg-light text-center">
+            ES
+            4 x 0
+            SI
+          </li>
+
+          <li class="list-group-item bg-light">
+            <span class="text-muted">1</span> x <span class="text-muted">2</span> Vingadores
+          </li>
+
+          <li class="list-group-item bg-light">
+            Thanos <span class="text-muted">1</span> x <span class="text-muted">2</span> Vingadores
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm card shadow-sm m-3 mt-0 p-0">
+      <div class="card-body">
+        <h5 class="card-title">Meus times</h5>
+
+        <ul class="list-group">
+          <li class="list-group-item">Time Batata</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/jquery-3.3.1.slim.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
