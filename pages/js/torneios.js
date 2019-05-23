@@ -4,6 +4,7 @@ $(document).ready(function () {
     $('#esconder').hide();
     $('#radios-0').click(function () {
         $(".js-example-basic-multiple").prop("disabled", false);
+        $(".classeEsconder").html('');
         $('#esconder').hide();
     });
 
@@ -16,7 +17,7 @@ $(document).ready(function () {
     $("#button-addon4").click(function () {
         let time1 = $('#time1').val();
         let time2 = $('#time2').val();
-        let htmlToInsert = `<div class="row" id="esconder" > 
+        let htmlToInsert = `<div class="row classeEsconder" id="esconder" > 
                   <div class="col-md-6"> 
                     <div class="input-group"> 
                       <input type="text" class="form-control" disabled placeholder="Time 1" value="${time1}"
